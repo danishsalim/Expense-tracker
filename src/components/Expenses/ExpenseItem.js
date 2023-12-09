@@ -1,18 +1,15 @@
 import './ExpenseItem.css'
 import { ExpenseDate } from './ExpenseDate';
 import ExpenseDetail from './ExpenseDetail';
+import  Card from '../UI/Card'
 
 const ExpenseItem = (props) => {
  
   return (
-    <>
-    <div className='expense-item'>
+    <Card className='expense-item'>
       <ExpenseDate date={props.date}/>
       <ExpenseDetail amount={props.amount}  LocationOfExpenditure={props.LocationOfExpenditure}   title={props.title} />
-    </div>
-
-    </>
-    
+    </Card>
   )
 }
 export default ExpenseItem

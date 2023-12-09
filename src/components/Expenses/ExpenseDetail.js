@@ -1,6 +1,5 @@
 
-
-export const ExpenseDetail = (props) => {
+ const ExpenseDetail = (props) => {
   return (
     <>
         <div className='location-of-expenditure'>
