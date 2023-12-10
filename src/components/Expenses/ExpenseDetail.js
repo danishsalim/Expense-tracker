@@ -1,5 +1,8 @@
 
  const ExpenseDetail = (props) => {
+    const clickHandler=()=>{
+        console.log("clicked")
+    }
   return (
     <>
         <div className='location-of-expenditure'>
@@ -11,6 +14,7 @@
         <div className='expense-item__price '>
             ${props.amount}
         </div>
+        <button onClick={clickHandler}>change title</button>
     </>
   )
 }
