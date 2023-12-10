@@ -1,7 +1,7 @@
 import ExpenseItem from "./components/Expenses/ExpenseItem";
 import Card from "./components/UI/Card";
 import './components/Expenses/Expenses.css'
-const expenses = [
+export const expenses = [
   {
     id: 'e1' ,
     title:'Toilet Paper' ,
@@ -39,7 +39,7 @@ function App() {
       <Card className='expenses'>
       {
         expenses.map((item)=>(
-          <ExpenseItem title={item.title} amount={item.amount} date={item.date} LocationOfExpenditure={item.LocationOfExpenditure}></ExpenseItem>
+          <ExpenseItem id={item.id} title={item.title} amount={item.amount} date={item.date} LocationOfExpenditure={item.LocationOfExpenditure}></ExpenseItem>
         ))
       }
       </Card>

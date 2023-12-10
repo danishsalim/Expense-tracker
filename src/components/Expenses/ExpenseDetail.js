@@ -1,7 +1,13 @@
-
+import {expenses} from '../../App'
+import './ExpenseDetail.css'
  const ExpenseDetail = (props) => {
     const clickHandler=()=>{
         console.log("clicked")
+    }
+    const deleteHandler=(e,idx)=>{
+        // console.log("del "+idx)
+        // console.log(e.target.parentElement)
+        e.target.parentElement.classList.add('hide')
     }
   return (
     <>
@@ -15,6 +21,7 @@
             ${props.amount}
         </div>
         <button onClick={clickHandler}>change title</button>
+        <button onClick={(e)=>deleteHandler(e,props.id)}>Delete</button>
     </>
   )
 }
