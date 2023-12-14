@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import {expenses} from '../../App'
 import './ExpenseDetail.css'
  const ExpenseDetail = (props) => {
     const [title,setTitle] = useState(props.title);
