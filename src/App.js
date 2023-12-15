@@ -2,7 +2,8 @@ import ExpenseItem from "./components/Expenses/ExpenseItem";
 import Card from "./components/UI/Card";
 import './components/Expenses/Expenses.css'
 import NewExpense from "./components/NewExpense/NewExpense"
-export const expenses = [
+import { useState } from "react";
+ const data = [
   {
     id: 'e1' ,
     title:'Toilet Paper' ,
@@ -32,11 +33,19 @@ export const expenses = [
     date:new Date(2023,12,7) ,
     LocationOfExpenditure:'Zudio'
   }
-]
+];
+
 function App() {
+  const [expenses,setExpenses] = useState(data)
+  const addExpenseHandler = expense => {
+    console.log("in app.js");
+    console.log(expense);
+    setExpenses([...expenses,expense])
+  };
+
   return (
     <>
-      <NewExpense />
+      <NewExpense  onAddExpense = {addExpenseHandler} />
       <Card className='expenses'>
       {
         expenses.map((item)=>(
