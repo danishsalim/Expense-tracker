@@ -1,8 +1,8 @@
-import ExpenseItem from "./components/Expenses/ExpenseItem";
-import Card from "./components/UI/Card";
+
 import './components/Expenses/Expenses.css'
 import NewExpense from "./components/NewExpense/NewExpense"
 import { useState } from "react";
+import Expenses from "./components/Expenses/Expenses";
  const data = [
   {
     id: 'e1' ,
@@ -46,13 +46,7 @@ function App() {
   return (
     <>
       <NewExpense  onAddExpense = {addExpenseHandler} />
-      <Card className='expenses'>
-      {
-        expenses.map((item)=>(
-          <ExpenseItem id={item.id} title={item.title} amount={item.amount} date={item.date} LocationOfExpenditure={item.LocationOfExpenditure}></ExpenseItem>
-        ))
-      }
-      </Card>
+      <Expenses  items={expenses} /> 
     </>
    
   );
