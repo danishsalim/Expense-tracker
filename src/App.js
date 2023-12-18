@@ -14,19 +14,19 @@ import Expenses from "./components/Expenses/Expenses";
     id: 'e2' ,
     title: 'New TV',
     amount: 799.5,
-    date:new Date(2022,10,9) ,
+    date:new Date(2020,10,9) ,
   },
   {
     id:'e3' ,
     title: 'Car Insurance',
     amount: '294.1',
-    date:new Date(2022,12,9) ,
+    date:new Date(2019,12,9) ,
   },
   {
     id: 'e4' ,
     title: 'New Desk',
     amount: '450',
-    date:new Date(2023,12,7) ,
+    date:new Date(2019,12,7) ,
   }
 ];
 
