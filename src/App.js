@@ -20,7 +20,7 @@ import Expenses from "./components/Expenses/Expenses";
     id:'e3' ,
     title: 'Car Insurance',
     amount: '294.1',
-    date:new Date(2019,11,30) ,//(y,m,d)
+    date:new Date(2023,11,30) ,//(y,m,d)
   },
   {
     id: 'e4' ,
